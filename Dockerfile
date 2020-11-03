@@ -6,7 +6,14 @@ RUN pip install --upgrade pip
 
 RUN pip install keras==2.2.4
 RUN pip install tensorflow==1.15
-RUN pip install gym && pip install keras_metrics && pip install opencv-python
+RUN pip install keras_metrics && pip install opencv-python
+
+# Installing gym
+RUN git clone https://github.com/openai/gym.git && cd gym && pip install -e .
+
+# Installing open GL
+RUN apt-get update
+RUN apt-get install -y freeglut3-dev
 
 EXPOSE 8888
 
