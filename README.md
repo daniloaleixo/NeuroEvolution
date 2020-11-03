@@ -24,3 +24,19 @@ This genetic algorithm has some parameters that can be customized to explore dif
 * both_parent_percentage: Percentage of genomes that will come from crossover between two parents
 * one_parent_percentage: Percentage of genomes that will come from one parent only (will not suffer from crossover, only from mutation)
 * episodes: how many episodes it will run before extracting the fitness of the genomes
+
+## Results
+The algorithm is surprisingly fast at converging, very different comparing to its backpropagation peers.
+
+Results using the following parameters:
+```
+population_size 64
+generations 200
+mutation_variance 0.1
+survival_ratio 0.1
+both_parent_percentage 0.8
+one_parent_percentage 0.1
+episodes 15
+```
+
+![img](https://github.com/daniloaleixo/NeuroEvolution/blob/master/images/Screenshot%20from%202020-11-03%2012-59-39.png)
